@@ -1,7 +1,7 @@
-# ADX-python-logging
+# ADX-logging-handler
 A python logging handler for Azure Data explorer
 
-[![PyPI version](https://badge.fury.io/py/adx-python-logging.svg)](https://pypi.org/project/adx-python-logging/)
+[![PyPI version](https://badge.fury.io/py/adx-logging-handler.svg)](https://pypi.org/project/adx-logging-handler/)
 
 ## Introduction
 
@@ -39,7 +39,7 @@ You also need to create a table and a JSON mapping in your ADX cluster. You can 
 
 You can install this package with pip:
 ```
-pip install adx-python-logging
+pip install adx-logging-handler
 ```
 
 ### Usage
@@ -48,7 +48,7 @@ Here is an example of how to use this package in your Python code:
 ```python
 import logging
 from dotenv import load_dotenv
-from adx-python-logging import add_ADX_handler_to_logger
+from adx_logging_handler import add_ADX_handler_to_logger
 
 def log_str_func(record: logging.LogRecord):
     asctime_obj = datetime.datetime.utcfromtimestamp(record.created)
