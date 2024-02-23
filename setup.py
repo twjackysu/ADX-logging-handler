@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="adx-logging-handler",
-    version="1.0.1",
+    version="1.0.3",
     description="A python logging handler for Azure Data explorer",
     package_dir={"": "src"},
     packages=find_packages(where="src"),

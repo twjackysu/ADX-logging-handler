@@ -4,11 +4,12 @@ import logging
 import os
 import io
 import uuid
-from src.adx_logging_handler.ingest_client import get_ingest_client
+from typing import Callable
+from .ingest_client import get_ingest_client
 
 
 def add_ADX_handler_to_logger(
-    logger: logging.Logger, get_log_str: callable[[logging.LogRecord], str]
+    logger: logging.Logger, get_log_str: Callable[[logging.LogRecord], str]
 ):
     database_name = os.getenv("ADX_DATABASE_NAME")
     table_name = os.getenv("LOG_TABLE_NAME")
@@ -47,7 +48,7 @@ def send_logs_to_adx_queue(
     record: logging.LogRecord,
     ingest_client: QueuedIngestClient,
     ingestion_props: IngestionProperties,
-    get_log_str: callable[[logging.LogRecord], str],
+    get_log_str: Callable[[logging.LogRecord], str],
 ):
     source_id = str(uuid.uuid4())
     try:
