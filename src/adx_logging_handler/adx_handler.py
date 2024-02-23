@@ -4,7 +4,7 @@ import logging
 import os
 import io
 import uuid
-from src.adx_logging.ingest_client import get_ingest_client
+from src.adx_logging_handler.ingest_client import get_ingest_client
 
 
 def add_ADX_handler_to_logger(

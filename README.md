@@ -47,6 +47,8 @@ pip install adx-logging-handler
 Here is an example of how to use this package in your Python code:
 ```python
 import logging
+import datetime
+import json
 from dotenv import load_dotenv
 from adx_logging_handler import add_ADX_handler_to_logger
 
