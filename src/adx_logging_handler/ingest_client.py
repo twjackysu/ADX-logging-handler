@@ -20,6 +20,6 @@ def get_ingest_client():
         )
     )
 
-    ingest_client = QueuedIngestClient(ingest_connection)
+    client = QueuedIngestClient(ingest_connection)
 
-    return ingest_client
+    return client
